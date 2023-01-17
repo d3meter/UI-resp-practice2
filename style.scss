@@ -1,0 +1,170 @@
+/* --- start of CSS reset --- */
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+  box-sizing: border-box;
+/*   background: transparent; */
+  font-family: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+a img {
+  border: none;
+}
+
+button,
+a {
+  cursor: pointer;
+  color: inherit;
+}
+
+textarea {
+  resize: none;
+}
+
+button,
+textarea,
+select {
+  appearance: none !important;
+  border-radius: 0;
+}
+
+/* --- end of CSS reset --- */
+
+/* Rules for sizing the icon. */
+.material-icons.md-18 {
+  font-size: 18px;
+}
+.material-icons.md-24 {
+  font-size: 24px;
+}
+.material-icons.md-36 {
+  font-size: 36px;
+}
+.material-icons.md-48 {
+  font-size: 48px;
+}
+
+/* Rules for using icons as black on a light background. */
+.material-icons.md-dark {
+  color: rgba(0, 0, 0, 0.54);
+}
+.material-icons.md-dark.md-inactive {
+  color: rgba(0, 0, 0, 0.26);
+}
+
+/* Rules for using icons as white on a dark background. */
+.material-icons.md-light {
+  color: rgba(255, 255, 255, 1);
+}
+.material-icons.md-light.md-inactive {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+$primary: #f8f7f3;
+$secondary: #1a24fb;
+
+body {
+  width: 100%;
+  background-color: $primary;
+  color: $secondary;
+  font-family: "Overpass", sans-serif;
+  min-width: 340px;
+  position: absolute;
+}
+
+.header {
+  width: 100%;
+  height: 40px;
+  position: fixed;
+  background-color: $secondary;
+  color: $primary;
+  display: flex;
+  flex-direction: row;
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 20px;
+    span {
+      cursor: pointer;
+    }
+}
+
+.container {
+  margin-block: 120px;
+  margin-inline: 50px;
+  display: flex;
+  justify-content: center;
+  .cards {
+    max-width: 1280px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 80px 20px;
+    flex-wrap: wrap;
+    .card {
+      height: auto;
+      .card-container {
+        position: relative;
+        border: 1px solid $secondary;
+        padding: 40px;
+        max-width: 360px;
+        min-width: 320px;
+        height: 100%;
+        .id {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: absolute;
+          right: 0;
+          top: 0;
+          height: 40px;
+          width: 40px;
+          font-size: 24px;
+          font-weight: bold;
+          font-family: "Montserrat", sans-serif;
+        }
+        .sub {
+          font-size: 12px;
+          letter-spacing: 0.2em;
+          text-transform: uppercase;
+          padding-bottom: 10px;
+          font-family: "Montserrat", sans-serif;
+        }
+        .title {
+          font-size: 36px;
+          font-weight: bold;
+          line-height: 1.2;
+          padding-bottom: 20px;
+          font-family: "Montserrat", sans-serif;
+        }
+        .text {
+          font-size: 16px;
+        }
+      }
+      button {
+        margin-top: 10px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: 18px;
+        font-size: 14px;
+        font-family: "Montserrat", sans-serif;
+      }
+      button:hover {
+        background-color: #1a24fb;
+        color: #f8f7f3;
+      }
+    }
+  }
+}
